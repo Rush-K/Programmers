@@ -12,11 +12,11 @@ public class UnfinishedPlayer {
     public static Hashtable<String, Integer> hashTable;
 
     public static String solution(String[] participant, String[] completion) {
-    	hashTable = new Hashtable<String, Integer>(); // HashTable 선
+    	hashTable = new Hashtable<String, Integer>(); // HashTable 선언 
     	String answer = "";
     	
     	for (String temp : participant) { // participant 요소를 키로 활용하여 HashTable에 put
-    		if (hashTable.containsKey(temp)) { // 이미 존재하는 participant가 있을 경
+    		if (hashTable.containsKey(temp)) { // 이미 존재하는 participant가 있을 경우 
     			int count = (int)hashTable.get(temp) + 1;
     			hashTable.put(temp, count);
     		} else { // 새로운 participant 추가 
@@ -28,7 +28,7 @@ public class UnfinishedPlayer {
     		hashTable.put(temp, (int)hashTable.get(temp) - 1);
     	}
     	
-    	for (String temp : participant) { // value가 1인 Key를 찾
+    	for (String temp : participant) { // value가 1인 Key를 찾음 
     		if ((int)hashTable.get(temp) == 1) {
     			answer = temp;
     			break;
@@ -50,7 +50,6 @@ public class UnfinishedPlayer {
 		String[] completion = new String[3];
 		completion[0] = "stanko";
 		completion[1] = "ana";
-		completion[2] = "mislav";
 		
 		String result = solution(participant, completion);
 		System.out.println(result);
