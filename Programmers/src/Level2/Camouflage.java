@@ -12,7 +12,7 @@ public class Camouflage {
 	public static HashMap<String, Integer> hashMap; // HashMap 선언 
 	
 	public static int solution(String[][] clothes) {
-		hashMap = new HashMap<String, Integer>();
+		hashMap = new HashMap<String, Integer>(); // key : String, value : Integer
 		
 		int answer = 1;
 		
