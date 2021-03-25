@@ -24,7 +24,7 @@ public class Camouflage {
 					hashMap.put(clothes[i][1], hashMap.get(clothes[i][1]) + 1);
 				}	
 			} catch (Exception e) { // clothes 가 존재하지 않을 경우 
-				break;
+				break; // 반복문 종료 
 			}
 		}
 		
